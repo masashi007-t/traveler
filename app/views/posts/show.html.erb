@@ -1,0 +1,7 @@
+<h2>旅行先</h2>
+<p><%= @post.location %></p>
+<h2>感想</h2>
+<p><%= @post.text %></p>
+<%= link_to '編集', "/posts/#{@post.id}/edit" %><br>
+<%= link_to '削除', "/posts/#{@post.id}", data: {turbo_method: :delete, turbo_confirm: "Are you sure?" } %><br>
+<%= link_to '一覧', posts_path %>
